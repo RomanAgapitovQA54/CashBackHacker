@@ -1,10 +1,10 @@
 package ru.netology.service;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldCalculateRemainIfAmountIsBoundary() {
         CashbackHackService service = new CashbackHackService();
 
@@ -13,10 +13,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldCalculateRemainIfAmountIsMoreBoundary() {
         CashbackHackService service = new CashbackHackService();
 
@@ -25,10 +25,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 999;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldReturnThousandWhenAmountIsZero() {
         CashbackHackService service = new CashbackHackService();
 
@@ -37,10 +37,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldCalculateRemain() {
         CashbackHackService service = new CashbackHackService();
 
@@ -49,10 +49,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 900;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldCalculateRemainIfAmountIsLessBoundary() {
         CashbackHackService service = new CashbackHackService();
 
@@ -61,10 +61,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void shouldCalculateRemainIfAmountIsLessZero() {
         CashbackHackService service = new CashbackHackService();
 
@@ -73,6 +73,6 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1001;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 }
